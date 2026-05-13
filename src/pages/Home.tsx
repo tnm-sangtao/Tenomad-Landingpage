@@ -351,7 +351,7 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-12">
           {/* Header */}
           <div className="max-w-3xl mb-16">
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-6">
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-foreground mb-6">
               The Digital Lab & Shipped Products
             </p>
             <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tighter leading-[1.1] mb-6">

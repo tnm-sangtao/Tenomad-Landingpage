@@ -40,7 +40,7 @@ export default function OurTeam() {
       name: "Tuan Nguyen",
       role: "Co-Founder & CEO",
       bio: "Ex-Silicon Valley nomad. Obsessed with scalable business architecture, engineering precision, and building high-trust partnerships.",
-      image: "/team_tuan.png",
+      image: "/anhDung.png",
       icon: Compass,
       label: "EX-SILICON VALLEY",
       github: "https://github.com",
@@ -51,7 +51,7 @@ export default function OurTeam() {
       name: "Long Tran",
       role: "Co-Founder & CTO",
       bio: "Fullstack system architect. Obsessed with high performance, type-safe structures, and robust database engines.",
-      image: "/team_long.png",
+      image: "/SonTran.png",
       icon: Terminal,
       label: "SYSTEM ARCHITECT",
       github: "https://github.com",
@@ -62,7 +62,7 @@ export default function OurTeam() {
       name: "Huy Le",
       role: "Lead Product Designer",
       bio: "Balancing raw artistic emotion with rigid functional grid structures to design gorgeous, highly intuitive digital platforms.",
-      image: "/team_huy.png",
+      image: "/Sang.png",
       icon: Palette,
       label: "ART & MATH",
       github: "https://github.com",
@@ -73,7 +73,7 @@ export default function OurTeam() {
       name: "Vy Nguyen",
       role: "QA Automation Lead",
       bio: "Building bulletproof testing pipelines and automated suites to guarantee flawless software deployments on every single commit.",
-      image: "/team_vy.png",
+      image: "/Sau.png",
       icon: ShieldCheck,
       github: "https://github.com",
       linkedin: "https://linkedin.com",
@@ -149,11 +149,11 @@ export default function OurTeam() {
             {/* 1. TUAN NGUYEN - CEO (col-span-8, row-span-2) */}
             <div className="lg:col-span-8 lg:row-span-2 border border-border bg-card group flex flex-col md:flex-row overflow-hidden hover:border-foreground/30 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
               {/* Image Container */}
-              <div className="relative md:w-5/12 aspect-[1/1.1] md:aspect-auto overflow-hidden bg-muted border-b md:border-b-0 md:border-r border-border">
+              <div className="relative md:w-5/12 aspect-[1/1.1] md:aspect-auto overflow-hidden border-b md:border-b-0 md:border-r border-border">
                 <img 
                   src={members.tuan.image} 
                   alt={members.tuan.name} 
-                  className="w-full h-full object-cover grayscale contrast-[1.05] brightness-[0.95] group-hover:grayscale-0 group-hover:scale-105 group-hover:brightness-100 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                 />
                 <div className="absolute top-4 left-4 bg-background/95 backdrop-blur-sm px-3 py-1 border border-border/80">
                   <p className="text-[9px] font-bold uppercase tracking-widest text-foreground flex items-center gap-1.5">
@@ -199,11 +199,11 @@ export default function OurTeam() {
             {/* 2. LONG TRAN - CTO (col-span-4, row-span-2) */}
             <div className="lg:col-span-4 lg:row-span-2 border border-border bg-card group flex flex-col overflow-hidden hover:border-foreground/30 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
               {/* Image Container */}
-              <div className="relative aspect-[1.4/1] lg:aspect-[1.2/1] overflow-hidden bg-muted border-b border-border">
+              <div className="relative aspect-[1.4/1] lg:aspect-[1.2/1] overflow-hidden border-b border-border">
                 <img 
                   src={members.long.image} 
                   alt={members.long.name} 
-                  className="w-full h-full object-cover grayscale contrast-[1.05] brightness-[0.95] group-hover:grayscale-0 group-hover:scale-105 group-hover:brightness-100 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                 />
                 <div className="absolute top-4 left-4 bg-background/95 backdrop-blur-sm px-3 py-1 border border-border/80">
                   <p className="text-[9px] font-bold uppercase tracking-widest text-foreground flex items-center gap-1.5">
@@ -250,11 +250,11 @@ export default function OurTeam() {
             {/* 3. HUY LE - Lead Designer (col-span-4, row-span-2) */}
             <div className="lg:col-span-4 lg:row-span-2 border border-border bg-card group flex flex-col overflow-hidden hover:border-foreground/30 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
               {/* Image Container */}
-              <div className="relative aspect-[1.4/1] lg:aspect-[1.2/1] overflow-hidden bg-muted border-b border-border">
+              <div className="relative aspect-[1.4/1] lg:aspect-[1.2/1] overflow-hidden border-b border-border">
                 <img 
                   src={members.huy.image} 
                   alt={members.huy.name} 
-                  className="w-full h-full object-cover grayscale contrast-[1.05] brightness-[0.95] group-hover:grayscale-0 group-hover:scale-105 group-hover:brightness-100 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                 />
                 <div className="absolute top-4 left-4 bg-background/95 backdrop-blur-sm px-3 py-1 border border-border/80">
                   <p className="text-[9px] font-bold uppercase tracking-widest text-foreground flex items-center gap-1.5">
@@ -298,11 +298,11 @@ export default function OurTeam() {
 
             {/* 4. VY NGUYEN - QA (col-span-4, row-span-1) */}
             <div className="lg:col-span-4 lg:row-span-1 border border-border bg-card group flex flex-row items-center p-6 gap-6 hover:border-foreground/30 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] bg-card/50">
-              <div className="relative w-24 h-24 rounded-none overflow-hidden bg-muted border border-border flex-shrink-0">
+              <div className="relative w-24 h-24 rounded-none overflow-hidden border border-border flex-shrink-0">
                 <img 
                   src={members.vy.image} 
                   alt={members.vy.name} 
-                  className="w-full h-full object-cover grayscale contrast-[1.05] brightness-[0.95] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                 />
               </div>
               <div className="flex flex-col justify-between h-24 py-1 flex-grow">
@@ -327,11 +327,11 @@ export default function OurTeam() {
 
             {/* 5. MINH PHAM - Senior Fullstack (col-span-4, row-span-1) */}
             <div className="lg:col-span-4 lg:row-span-1 border border-border bg-card group flex flex-row items-center p-6 gap-6 hover:border-foreground/30 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] bg-card/50">
-              <div className="relative w-24 h-24 rounded-none overflow-hidden bg-muted border border-border flex-shrink-0">
+              <div className="relative w-24 h-24 rounded-none overflow-hidden border border-border flex-shrink-0">
                 <img 
                   src={members.minh.image} 
                   alt={members.minh.name} 
-                  className="w-full h-full object-cover grayscale contrast-[1.05] brightness-[0.95] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                 />
               </div>
               <div className="flex flex-col justify-between h-24 py-1 flex-grow">
@@ -356,11 +356,11 @@ export default function OurTeam() {
 
             {/* 6. CHI VO - Frontend (col-span-4, row-span-1) */}
             <div className="lg:col-span-4 lg:row-span-1 border border-border bg-card group flex flex-row items-center p-6 gap-6 hover:border-foreground/30 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] bg-card/50">
-              <div className="relative w-24 h-24 rounded-none overflow-hidden bg-muted border border-border flex-shrink-0">
+              <div className="relative w-24 h-24 rounded-none overflow-hidden border border-border flex-shrink-0">
                 <img 
                   src={members.chi.image} 
                   alt={members.chi.name} 
-                  className="w-full h-full object-cover grayscale contrast-[1.05] brightness-[0.95] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                 />
               </div>
               <div className="flex flex-col justify-between h-24 py-1 flex-grow">
@@ -385,11 +385,11 @@ export default function OurTeam() {
 
             {/* 7. DUC NGUYEN - DevOps (col-span-4, row-span-1) */}
             <div className="lg:col-span-4 lg:row-span-1 border border-border bg-card group flex flex-row items-center p-6 gap-6 hover:border-foreground/30 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] bg-card/50">
-              <div className="relative w-24 h-24 rounded-none overflow-hidden bg-muted border border-border flex-shrink-0">
+              <div className="relative w-24 h-24 rounded-none overflow-hidden border border-border flex-shrink-0">
                 <img 
                   src={members.duc.image} 
                   alt={members.duc.name} 
-                  className="w-full h-full object-cover grayscale contrast-[1.05] brightness-[0.95] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                 />
               </div>
               <div className="flex flex-col justify-between h-24 py-1 flex-grow">
@@ -415,11 +415,11 @@ export default function OurTeam() {
             {/* 8. BAO HOANG - AI (col-span-4, row-span-2) */}
             <div className="lg:col-span-4 lg:row-span-2 border border-border bg-card group flex flex-col overflow-hidden hover:border-foreground/30 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
               {/* Image Container */}
-              <div className="relative aspect-[1.4/1] lg:aspect-[1.2/1] overflow-hidden bg-muted border-b border-border">
+              <div className="relative aspect-[1.4/1] lg:aspect-[1.2/1] overflow-hidden border-b border-border">
                 <img 
                   src={members.bao.image} 
                   alt={members.bao.name} 
-                  className="w-full h-full object-cover grayscale contrast-[1.05] brightness-[0.95] group-hover:grayscale-0 group-hover:scale-105 group-hover:brightness-100 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                 />
                 <div className="absolute top-4 left-4 bg-background/95 backdrop-blur-sm px-3 py-1 border border-border/80">
                   <p className="text-[9px] font-bold uppercase tracking-widest text-foreground flex items-center gap-1.5">
