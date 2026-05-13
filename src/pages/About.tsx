@@ -209,25 +209,25 @@ export default function About() {
                 name: "Dung Nguyen",
                 role: "Co-Founder & CEO",
                 bio: "Ex-Silicon Valley nomad. Obsessed with scalable business architecture, engineering precision, and client partnership.",
-                image: "/team_minh.png",
+                image: "/anh Dũng.jpg",
               },
               {
                 name: "Sang Tao",
                 role: "Co-Founder & CTO",
                 bio: "Fullstack system architect. Obsessed with high performance, type-safe structures, and clean databases.",
-                image: "/team_bao.png",
+                image: "/sang1111.png",
               },
               {
                 name: "Trang Le",
                 role: "Lead Product Designer",
                 bio: "Balancing emotion with rigid visual standards to design beautiful, highly performant products.",
-                image: "/team_chi.png",
+                image: "/Sâu.png",
               },
               {
                 name: "Son Tran",
                 role: "QA Automation Lead",
                 bio: "Building rigid testing infrastructure and CI/CD pipelines to guarantee flawless platform deployments.",
-                image: "/team_duc.png",
+                image: "/SonTran.png",
               },
             ].map((member) => (
               <div
