@@ -206,28 +206,28 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                name: "Tuan Nguyen",
+                name: "Dung Nguyen",
                 role: "Co-Founder & CEO",
                 bio: "Ex-Silicon Valley nomad. Obsessed with scalable business architecture, engineering precision, and client partnership.",
-                image: "/team_tuan.png",
+                image: "/team_minh.png",
               },
               {
-                name: "Long Tran",
+                name: "Sang Tao",
                 role: "Co-Founder & CTO",
                 bio: "Fullstack system architect. Obsessed with high performance, type-safe structures, and clean databases.",
-                image: "/team_long.png",
+                image: "/team_bao.png",
               },
               {
-                name: "Huy Le",
+                name: "Trang Le",
                 role: "Lead Product Designer",
                 bio: "Balancing emotion with rigid visual standards to design beautiful, highly performant products.",
-                image: "/team_huy.png",
+                image: "/team_chi.png",
               },
               {
-                name: "Vy Nguyen",
+                name: "Son Tran",
                 role: "QA Automation Lead",
                 bio: "Building rigid testing infrastructure and CI/CD pipelines to guarantee flawless platform deployments.",
-                image: "/team_vy.png",
+                image: "/team_duc.png",
               },
             ].map((member) => (
               <div
@@ -251,12 +251,15 @@ export default function About() {
                     <h3 className="text-xl font-bold uppercase tracking-tight text-foreground">
                       {member.name}
                     </h3>
+                    {/* Role and Bio hidden as requested */}
+                    {/* 
                     <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                       {member.role}
                     </p>
                     <p className="text-muted-foreground text-sm leading-relaxed font-light mt-4">
                       {member.bio}
                     </p>
+                    */}
                   </div>
 
                   {/* Social Links */}
