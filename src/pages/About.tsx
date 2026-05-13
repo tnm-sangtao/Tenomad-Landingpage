@@ -209,13 +209,13 @@ export default function About() {
                 name: "Dung Nguyen",
                 role: "Co-Founder & CEO",
                 bio: "Ex-Silicon Valley nomad. Obsessed with scalable business architecture, engineering precision, and client partnership.",
-                image: "/anhDung.jpg",
+                image: "/anhDung.png",
               },
               {
                 name: "Sang Tao",
                 role: "Co-Founder & CTO",
                 bio: "Fullstack system architect. Obsessed with high performance, type-safe structures, and clean databases.",
-                image: "/sang1111.png",
+                image: "/Sang.png",
               },
               {
                 name: "Trang Le",
@@ -241,8 +241,6 @@ export default function About() {
                     alt={member.name}
                     className="w-full h-full object-cover grayscale contrast-[1.05] brightness-[0.95] group-hover:grayscale-0 group-hover:scale-105 group-hover:brightness-100 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                   />
-                  {/* Glassmorphic border overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 
                 {/* Details Container */}
