@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Tenomad"
+version = "1.0.0"
+id = "artifacts/tenomad"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24950
+
+[services.development]
+run = "pnpm --filter @workspace/tenomad run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/tenomad", "run", "build" ]
+publicDir = "artifacts/tenomad/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24950"
+BASE_PATH = "/"
