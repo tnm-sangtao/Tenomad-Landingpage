@@ -209,7 +209,7 @@ export default function About() {
                 name: "Dung Nguyen",
                 role: "Co-Founder & CEO",
                 bio: "Ex-Silicon Valley nomad. Obsessed with scalable business architecture, engineering precision, and client partnership.",
-                image: "/anh Dũng.jpg",
+                image: "/anhDung.jpg",
               },
               {
                 name: "Sang Tao",
@@ -221,7 +221,7 @@ export default function About() {
                 name: "Trang Le",
                 role: "Lead Product Designer",
                 bio: "Balancing emotion with rigid visual standards to design beautiful, highly performant products.",
-                image: "/Sâu.png",
+                image: "/Sau.png",
               },
               {
                 name: "Son Tran",
