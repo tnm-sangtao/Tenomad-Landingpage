@@ -45,7 +45,7 @@ export default function Footer() {
               <Link href="/about" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium">About</Link>
               <Link href="/careers" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium">Careers</Link>
               <Link href="/blog" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium">Blog</Link>
-              <Link href="/contact" className="text-s uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium">Contact</Link>
+              <Link href="/contact" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors font-medium">Contact</Link>
             </div>
 
             <div className="flex gap-6">
