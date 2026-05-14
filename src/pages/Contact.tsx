@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const formSchema = z.object({
@@ -220,9 +220,7 @@ export default function Contact() {
               <a href="#" className="text-foreground hover:text-background hover:bg-foreground transition-colors bg-background border border-border p-4 rounded-none">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-foreground hover:text-background hover:bg-foreground transition-colors bg-background border border-border p-4 rounded-none">
-                <Twitter size={20} />
-              </a>
+
             </div>
           </div>
 
