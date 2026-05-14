@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Github, Linkedin } from "lucide-react";
+import { Facebook, Linkedin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const formSchema = z.object({
@@ -214,10 +214,10 @@ export default function Contact() {
 
             <h4 className="text-xs font-bold uppercase tracking-[0.3em] text-foreground mb-6">Follow Us</h4>
             <div className="flex gap-4">
-              <a href="#" className="text-foreground hover:text-background hover:bg-foreground transition-colors bg-background border border-border p-4 rounded-none">
-                <Github size={20} />
+              <a href="https://www.facebook.com/tenomadcompany" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-background hover:bg-foreground transition-colors bg-background border border-border p-4 rounded-none" aria-label="Facebook">
+                <Facebook size={20} />
               </a>
-              <a href="#" className="text-foreground hover:text-background hover:bg-foreground transition-colors bg-background border border-border p-4 rounded-none">
+              <a href="https://www.linkedin.com/company/tenomad/" className="text-foreground hover:text-background hover:bg-foreground transition-colors bg-background border border-border p-4 rounded-none">
                 <Linkedin size={20} />
               </a>
 

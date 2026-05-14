@@ -1,7 +1,7 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { Link } from "wouter";
 import { 
-  Github, 
+  Facebook, 
   Linkedin, 
   ArrowUpRight, 
   MapPin, 
@@ -24,7 +24,7 @@ interface TeamMember {
   image: string;
   icon: any;
   label?: string;
-  github?: string;
+  facebook?: string;
   linkedin?: string;
   quote?: string;
   tech?: string[];
@@ -43,7 +43,7 @@ export default function OurTeam() {
       image: "/anhDung.png",
       icon: Compass,
       label: "EX-SILICON VALLEY",
-      github: "https://github.com",
+      facebook: "https://www.facebook.com/tenomadcompany",
       linkedin: "https://linkedin.com",
       quote: "Software craftsmanship isn't just about writing code — it's about solving real human problems with elegance, focus, and absolute transparency.",
     },
@@ -54,7 +54,7 @@ export default function OurTeam() {
       image: "/SonTran.png",
       icon: Terminal,
       label: "SYSTEM ARCHITECT",
-      github: "https://github.com",
+      facebook: "https://www.facebook.com/tenomadcompany",
       linkedin: "https://linkedin.com",
       tech: ["TypeScript", "Go", "Rust", "PostgreSQL", "Docker"],
     },
@@ -65,7 +65,7 @@ export default function OurTeam() {
       image: "/Sang.png",
       icon: Palette,
       label: "ART & MATH",
-      github: "https://github.com",
+      facebook: "https://www.facebook.com/tenomadcompany",
       linkedin: "https://linkedin.com",
       quote: "A perfect interface looks inevitable, not designed. It breathes, reacts, and disappears, leaving only the experience.",
     },
@@ -75,7 +75,7 @@ export default function OurTeam() {
       bio: "Building bulletproof testing pipelines and automated suites to guarantee flawless software deployments on every single commit.",
       image: "/Sau.png",
       icon: ShieldCheck,
-      github: "https://github.com",
+      facebook: "https://www.facebook.com/tenomadcompany",
       linkedin: "https://linkedin.com",
     },
     minh: {
@@ -84,7 +84,7 @@ export default function OurTeam() {
       bio: "Specialist in enterprise cloud deployments, real-time sync systems, and serverless edge computing structures.",
       image: "/team_minh.png",
       icon: Code,
-      github: "https://github.com",
+      facebook: "https://www.facebook.com/tenomadcompany",
       linkedin: "https://linkedin.com",
     },
     chi: {
@@ -93,7 +93,7 @@ export default function OurTeam() {
       bio: "Crafting beautiful, pixel-perfect user layouts with butter-smooth micro-interactions and performant client logic.",
       image: "/team_chi.png",
       icon: Sparkles,
-      github: "https://github.com",
+      facebook: "https://www.facebook.com/tenomadcompany",
       linkedin: "https://linkedin.com",
     },
     duc: {
@@ -102,7 +102,7 @@ export default function OurTeam() {
       bio: "Automating isolated container ecosystems, zero-downtime deployment workflows, and securing cloud infrastructures.",
       image: "/team_duc.png",
       icon: Server,
-      github: "https://github.com",
+      facebook: "https://www.facebook.com/tenomadcompany",
       linkedin: "https://linkedin.com",
     },
     bao: {
@@ -112,7 +112,7 @@ export default function OurTeam() {
       image: "/team_bao.png",
       icon: Cpu,
       label: "INTELLIGENT AGENTS",
-      github: "https://github.com",
+      facebook: "https://www.facebook.com/tenomadcompany",
       linkedin: "https://linkedin.com",
       tech: ["PyTorch", "Transformers", "Python", "LangChain", "LLMs"],
     }
@@ -182,8 +182,8 @@ export default function OurTeam() {
                 {/* Socials */}
                 <div className="flex justify-between items-center pt-4 border-t border-border mt-auto">
                   <div className="flex gap-4">
-                    <a href={members.tuan.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
-                      <Github size={16} strokeWidth={1.5} />
+                    <a href={members.tuan.facebook} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
+                      <Facebook size={16} strokeWidth={1.5} />
                     </a>
                     <a href={members.tuan.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
                       <Linkedin size={16} strokeWidth={1.5} />
@@ -233,8 +233,8 @@ export default function OurTeam() {
 
                 <div className="flex justify-between items-center pt-4 border-t border-border mt-auto">
                   <div className="flex gap-4">
-                    <a href={members.long.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
-                      <Github size={16} strokeWidth={1.5} />
+                    <a href={members.long.facebook} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
+                      <Facebook size={16} strokeWidth={1.5} />
                     </a>
                     <a href={members.long.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
                       <Linkedin size={16} strokeWidth={1.5} />
@@ -281,8 +281,8 @@ export default function OurTeam() {
 
                 <div className="flex justify-between items-center pt-4 border-t border-border mt-auto">
                   <div className="flex gap-4">
-                    <a href={members.huy.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
-                      <Github size={16} strokeWidth={1.5} />
+                    <a href={members.huy.facebook} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
+                      <Facebook size={16} strokeWidth={1.5} />
                     </a>
                     <a href={members.huy.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
                       <Linkedin size={16} strokeWidth={1.5} />
@@ -312,8 +312,8 @@ export default function OurTeam() {
                 </div>
                 <p className="text-muted-foreground text-[11px] leading-relaxed line-clamp-2 font-light">{members.vy.bio}</p>
                 <div className="flex gap-3 items-center">
-                  <a href={members.vy.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
-                    <Github size={13} strokeWidth={1.5} />
+                  <a href={members.vy.facebook} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
+                    <Facebook size={13} strokeWidth={1.5} />
                   </a>
                   <a href={members.vy.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
                     <Linkedin size={13} strokeWidth={1.5} />
@@ -341,8 +341,8 @@ export default function OurTeam() {
                 </div>
                 <p className="text-muted-foreground text-[11px] leading-relaxed line-clamp-2 font-light">{members.minh.bio}</p>
                 <div className="flex gap-3 items-center">
-                  <a href={members.minh.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
-                    <Github size={13} strokeWidth={1.5} />
+                  <a href={members.minh.facebook} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
+                    <Facebook size={13} strokeWidth={1.5} />
                   </a>
                   <a href={members.minh.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
                     <Linkedin size={13} strokeWidth={1.5} />
@@ -370,8 +370,8 @@ export default function OurTeam() {
                 </div>
                 <p className="text-muted-foreground text-[11px] leading-relaxed line-clamp-2 font-light">{members.chi.bio}</p>
                 <div className="flex gap-3 items-center">
-                  <a href={members.chi.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
-                    <Github size={13} strokeWidth={1.5} />
+                  <a href={members.chi.facebook} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
+                    <Facebook size={13} strokeWidth={1.5} />
                   </a>
                   <a href={members.chi.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
                     <Linkedin size={13} strokeWidth={1.5} />
@@ -399,8 +399,8 @@ export default function OurTeam() {
                 </div>
                 <p className="text-muted-foreground text-[11px] leading-relaxed line-clamp-2 font-light">{members.duc.bio}</p>
                 <div className="flex gap-3 items-center">
-                  <a href={members.duc.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
-                    <Github size={13} strokeWidth={1.5} />
+                  <a href={members.duc.facebook} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
+                    <Facebook size={13} strokeWidth={1.5} />
                   </a>
                   <a href={members.duc.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
                     <Linkedin size={13} strokeWidth={1.5} />
@@ -449,8 +449,8 @@ export default function OurTeam() {
 
                 <div className="flex justify-between items-center pt-4 border-t border-border mt-auto">
                   <div className="flex gap-4">
-                    <a href={members.bao.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
-                      <Github size={16} strokeWidth={1.5} />
+                    <a href={members.bao.facebook} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
+                      <Facebook size={16} strokeWidth={1.5} />
                     </a>
                     <a href={members.bao.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">
                       <Linkedin size={16} strokeWidth={1.5} />

@@ -1,6 +1,6 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { Link } from "wouter";
-import { ArrowUpRight, MessageSquare, Hammer, Target, MapPin, CalendarDays, Globe, Github, Linkedin } from "lucide-react";
+import { ArrowUpRight, MessageSquare, Hammer, Target, MapPin, CalendarDays, Globe, Facebook, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const values = [
@@ -263,13 +263,13 @@ export default function About() {
                   {/* Social Links */}
                   <div className="flex gap-4 pt-6 border-t border-border mt-auto">
                     <a
-                      href="https://github.com"
+                      href="https://www.facebook.com/tenomadcompany"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-foreground transition-colors duration-300"
-                      aria-label="GitHub"
+                      aria-label="Facebook"
                     >
-                      <Github size={16} strokeWidth={1.5} />
+                      <Facebook size={16} strokeWidth={1.5} />
                     </a>
                     <a
                       href="https://linkedin.com"

@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Github, Linkedin } from "lucide-react";
+import { Facebook, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -49,10 +49,10 @@ export default function Footer() {
             </div>
 
             <div className="flex gap-6">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="GitHub">
-                <Github size={18} strokeWidth={1.5} />
+              <a href="https://www.facebook.com/tenomadcompany" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Facebook">
+                <Facebook size={18} strokeWidth={1.5} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/tenomad/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="LinkedIn">
                 <Linkedin size={18} strokeWidth={1.5} />
               </a>
 
