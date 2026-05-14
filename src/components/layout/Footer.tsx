@@ -24,7 +24,7 @@ export default function Footer() {
             </p>
             {/* Contact Information */}
             <div className="space-y-2 text-xs text-muted-foreground font-light tracking-wide">
-              <p className="flex items-start gap-2 leading-relaxed">
+              <p className="flex items-center gap-2 leading-relaxed">
                 <span className="font-bold text-[14px] uppercase tracking-wider text-foreground shrink-0 mt-0.5">HQ:</span>
                 <span>26, Ly Thuong Kiet St, Vinh Ninh Ward, Thuan Hoa District, Hue City</span>
               </p>
