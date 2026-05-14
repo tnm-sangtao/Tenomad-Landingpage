@@ -1,7 +1,7 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { Link } from "wouter";
 import { useState, useEffect, useRef } from "react";
-import { Search, ArrowUpRight, Clock, Mail, CheckCircle2 } from "lucide-react";
+import { Search, ArrowUpRight, Clock, Mail, CheckCircle2, ArrowRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -708,39 +708,69 @@ function SidebarNewsletterForm() {
     }, 1200);
   };
 
-  if (isSubscribed) {
-    return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="flex items-center gap-3 bg-accent/10 border border-accent/20 px-4 py-3 rounded-xl text-accent text-[10px] font-bold uppercase tracking-widest w-full"
-      >
-        <CheckCircle2 size={14} />
-        Subscribed successfully!
-      </motion.div>
-    );
-  }
-
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full">
-      <Input
-        type="email"
-        placeholder="YOUR EMAIL..."
-        required
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        className="h-11 px-4 text-[10px] font-bold uppercase tracking-widest bg-background/50 border-border/60 focus-visible:border-accent rounded-xl w-full"
-      />
-      <motion.button
-        type="submit"
-        disabled={isSubmitting}
-        whileHover={{ scale: 1.01 }}
-        whileTap={{ scale: 0.99 }}
-        className="h-11 w-full bg-accent text-background font-bold text-[10px] uppercase tracking-widest rounded-xl hover:bg-accent/90 transition-colors duration-300 disabled:opacity-50 cursor-pointer inline-flex items-center justify-center"
-      >
-        {isSubmitting ? "Subscribing..." : "Subscribe"}
-      </motion.button>
-    </form>
+    <div className="p-6 border border-border/40 bg-background/40 backdrop-blur-md relative overflow-hidden group">
+      {/* Decorative background element */}
+      <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 blur-3xl -mr-16 -mt-16 group-hover:bg-accent/10 transition-colors duration-700" />
+
+      <div className="relative z-10">
+        <div className="flex items-center gap-2 mb-4">
+          <h3 className="text-[12px] font-black uppercase tracking-[0.3em] text-foreground">
+            Newsletter
+          </h3>
+        </div>
+
+        <p className="text-[11px] text-muted-foreground leading-relaxed mb-6 font-medium tracking-wide uppercase opacity-70">
+          Subscribe for deep-dives into engineering, design & strategy.
+        </p>
+
+        {isSubscribed ? (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="flex items-center gap-3 bg-accent/5 border border-accent/20 px-4 py-4 rounded-none text-accent text-[10px] font-bold uppercase tracking-[0.2em] w-full"
+          >
+            <CheckCircle2 size={14} className="flex-shrink-0" />
+            <span>Success: You're on the list</span>
+          </motion.div>
+        ) : (
+          <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full">
+            <div className="relative group/input">
+              <Input
+                type="email"
+                placeholder="Email Address..."
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="h-12 px-4 text-[10px] font-bold tracking-[0em] bg-background/50 border-border/60 focus-visible:border-accent focus-visible:ring-0 rounded-none w-full transition-all placeholder:text-muted-foreground/30"
+              />
+              <div className="absolute bottom-0 left-0 w-0 h-[1px] bg-accent transition-all duration-500 group-focus-within/input:w-full" />
+            </div>
+
+            <motion.button
+              type="submit"
+              disabled={isSubmitting}
+              whileTap={{ scale: 0.99 }}
+              className="h-12 w-full bg-foreground text-background font-semibold text-[12px] uppercase tracking-[0.3em] rounded-none transition-all duration-300 disabled:opacity-50 cursor-pointer overflow-hidden group/btn relative"
+            >
+              <div className="absolute inset-0 bg-accent translate-y-full group-hover/btn:translate-y-0 transition-transform duration-500" />
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                {isSubmitting ? "Syncing..." : "Join Circuit"}
+                {!isSubmitting && <ArrowRight size={12} className="group-hover/btn:translate-x-1 transition-transform" />}
+              </span>
+            </motion.button>
+          </form>
+        )}
+
+        <div className="mt-6 pt-6 border-t border-border/20 flex items-center justify-between opacity-40">
+          <span className="text-[11px] font-bold tracking-[0.2em] uppercase">No Spam Policy</span>
+          <div className="flex gap-1">
+            <div className="w-1 h-1 bg-accent rounded-full animate-pulse" />
+            <span className="text-[11px] font-bold tracking-[0.2em] uppercase">Encrypted</span>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -836,7 +866,7 @@ export default function Blog() {
               <Input
                 ref={mobileSearchInputRef}
                 type="search"
-                placeholder="Search articles..."
+                placeholder="Search..."
                 className="pl-12 pr-12 h-13 text-xs font-bold uppercase tracking-widest bg-background/30 backdrop-blur-sm border-border/60 focus-visible:border-accent rounded-xl"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -858,8 +888,8 @@ export default function Blog() {
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
                 className={`text-[11px] font-bold uppercase tracking-[0.2em] pb-2 border-b-2 transition-all cursor-pointer ${isActive
-                    ? "border-accent text-accent"
-                    : "border-transparent text-foreground/50 hover:text-foreground hover:border-border/40"
+                  ? "border-accent text-accent"
+                  : "border-transparent text-foreground/50 hover:text-foreground hover:border-border/40"
                   }`}
               >
                 {cat}
@@ -903,16 +933,14 @@ export default function Blog() {
 
                 {/* WIDGET 1: Premium Search Box */}
                 <div className="flex flex-col gap-3">
-                  <h4 className="text-[10px] font-mono font-bold uppercase tracking-[0.25em] text-accent/80">
-                    Search Articles
-                  </h4>
+
                   <div className="relative w-full">
                     <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-foreground/40 h-3.5 w-3.5" />
                     <Input
                       ref={desktopSearchInputRef}
                       type="search"
-                      placeholder="SEARCH..."
-                      className="pl-11 pr-12 h-11 text-[10px] font-bold uppercase tracking-widest bg-background/50 border-border/60 focus-visible:border-accent rounded-xl"
+                      placeholder="Search..."
+                      className="pl-11 pr-12 h-11 text-[10px] font-bold tracking-widest bg-background/50 border-border/60 focus-visible:border-accent rounded-none"
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                     />
@@ -925,7 +953,7 @@ export default function Blog() {
 
                 {/* WIDGET 2: Premium Vertical Category Selection */}
                 <div className="flex flex-col gap-4">
-                  <h4 className="text-[10px] font-mono font-bold uppercase tracking-[0.25em] text-accent/80">
+                  <h4 className="text-[10px] font-mono font-bold uppercase tracking-[0.25em] text-foreground/80">
                     Categories
                   </h4>
                   <div className="flex flex-col border-t border-border/40">
@@ -951,8 +979,8 @@ export default function Blog() {
                             </span>
                           </div>
                           <span className={`text-[9px] font-mono font-semibold px-2 py-0.5 rounded border transition-all ${isActive
-                              ? "bg-accent/10 border-accent/20 text-accent"
-                              : "bg-muted/30 border-border/40 text-foreground/40 group-hover/item:border-border group-hover/item:text-foreground/70"
+                            ? "bg-accent/10 border-accent/20 text-accent"
+                            : "bg-muted/30 border-border/40 text-foreground/40 group-hover/item:border-border group-hover/item:text-foreground/70"
                             }`}>
                             {count}
                           </span>
@@ -963,21 +991,30 @@ export default function Blog() {
                 </div>
 
                 {/* WIDGET 3: Premium Sidebar Newsletter Form */}
-                <div className="border border-border/40 rounded-2xl bg-card/10 backdrop-blur-md p-6 relative overflow-hidden">
-                  <div className="absolute -right-12 -bottom-12 w-32 h-32 rounded-full bg-accent/5 blur-[30px] pointer-events-none" />
-                  <div className="relative z-10 flex flex-col gap-4">
-                    <div className="inline-flex items-center justify-center self-start p-2.5 bg-accent/10 rounded-full border border-accent/20 text-accent">
-                      <Mail size={16} strokeWidth={2} />
-                    </div>
-                    <div>
-                      <h5 className="text-sm font-bold uppercase tracking-tight mb-1 text-foreground">
-                        Stay in the Loop
+                <div className="border border-border bg-card/5 p-8 relative overflow-hidden group/newsletter">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 blur-[40px] -translate-y-1/2 translate-x-1/2 pointer-events-none group-hover/newsletter:bg-accent/10 transition-colors duration-700" />
+
+                  <div className="relative z-10 flex flex-col gap-6">
+                    <div className="flex flex-col gap-2">
+                      <div className="inline-flex items-center gap-2 text-accent mb-2">
+
+
+                      </div>
+                      <h5 className="text-xl font-bold uppercase tracking-tighter text-foreground leading-none">
+                        Stay in the Loop<span className="text-accent">.</span>
                       </h5>
-                      <p className="text-[11px] text-muted-foreground font-light leading-relaxed">
-                        Get monthly insights on tech, design, and engineering delivered straight to your inbox.
+                      <p className="text-[12px] text-muted-foreground font-light leading-relaxed mt-2">
+                        Engineering insights, design systems, and product strategy.
                       </p>
                     </div>
-                    <SidebarNewsletterForm />
+
+                    <div className="pt-2">
+                      <SidebarNewsletterForm />
+                    </div>
+
+                    <p className="text-[11px] text-muted-foreground/50 italic">
+                      Zero spam. Just high-signal engineering notes.
+                    </p>
                   </div>
                 </div>
 

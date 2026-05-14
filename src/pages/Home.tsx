@@ -3,7 +3,7 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import HeroIllustration from "@/components/HeroIllustration";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 // Luxury Partner Brand Logos (SVG Vector Minimalist Designs)
@@ -153,6 +153,15 @@ export default function Home() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const videoSectionRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: videoSectionRef,
+    offset: ["start end", "center center"]
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
+  const borderRadius = useTransform(scrollYProgress, [0, 1], ["0rem", "0rem"]);
 
   useEffect(() => {
     // Delay YouTube iframe initialization to prevent blocking the main thread during initial page load
@@ -210,26 +219,33 @@ export default function Home() {
           </div>
         </motion.div>
 
-        <motion.div
-          className="w-full opacity-95 px-0"
-          initial={{ opacity: 0, scale: 0.98, y: 40 }}
-          animate={{ opacity: 0.95, scale: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-        >
-          <div className="w-full relative overflow-hidden bg-black aspect-video md:aspect-[21/9]">
-            {isVideoLoaded && (
-              <iframe
-                className="absolute top-0 left-0 w-full h-full pointer-events-none scale-[1.02]"
-                src="https://www.youtube.com/embed/FPhg_ZjrPtU?autoplay=1&mute=1&loop=1&playlist=FPhg_ZjrPtU&controls=0&modestbranding=1&rel=0&showinfo=0&playsinline=1&enablejsapi=1&iv_load_policy=3&disablekb=1"
-                title="Tenomad Hero Video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                loading="lazy"
-              />
-            )}
-          </div>
-        </motion.div>
+        <div ref={videoSectionRef} className="w-full">
+          <motion.div
+            className="w-full px-0"
+            style={{
+              scale,
+              borderRadius,
+              overflow: "hidden"
+            }}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+          >
+            <div className="w-full relative overflow-hidden bg-black aspect-video md:aspect-[21/9]">
+              {isVideoLoaded && (
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full pointer-events-none scale-[1.02]"
+                  src="https://www.youtube.com/embed/FPhg_ZjrPtU?autoplay=1&mute=1&loop=1&playlist=FPhg_ZjrPtU&controls=0&modestbranding=1&rel=0&showinfo=0&playsinline=1&enablejsapi=1&iv_load_policy=3&disablekb=1"
+                  title="Tenomad Hero Video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              )}
+            </div>
+          </motion.div>
+        </div>
       </section>
 
       {/* ── Problem ── */}
@@ -238,7 +254,7 @@ export default function Home() {
         ref={problemRef as React.RefObject<HTMLDivElement>}
       >
         {/* Label row */}
-        <div className="container mx-auto px-6 md:px-12 pb-16">
+        <div className="container mx-auto px-6 md:px-12 pb-8">
           <p className="text-xs font-bold uppercase tracking-[0.3em] text-foreground">
             The problem
           </p>
@@ -334,7 +350,7 @@ export default function Home() {
                 "Direct access to your lead engineer, always",
               ].map((point) => (
                 <div key={point} className="flex items-center gap-4">
-                  <span className="w-4 h-[1px] bg-foreground shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-foreground shrink-0" />
                   <p className="text-base text-foreground/80 font-light">{point}</p>
                 </div>
               ))}
