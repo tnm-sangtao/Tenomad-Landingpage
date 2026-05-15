@@ -152,7 +152,7 @@ export default function Home() {
 
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
   const videoSectionRef = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -163,11 +163,7 @@ export default function Home() {
   const scale = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
   const borderRadius = useTransform(scrollYProgress, [0, 1], ["0rem", "0rem"]);
 
-  useEffect(() => {
-    // Delay YouTube iframe initialization to prevent blocking the main thread during initial page load
-    const timer = setTimeout(() => setIsVideoLoaded(true), 1500);
-    return () => clearTimeout(timer);
-  }, []);
+
 
   const handleNext = () => {
     setActiveIndex((prev) => (prev + 1) % showcaseItems.length);
@@ -232,17 +228,17 @@ export default function Home() {
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           >
             <div className="w-full relative overflow-hidden bg-black aspect-video md:aspect-[21/9]">
-              {isVideoLoaded && (
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full pointer-events-none scale-[1.02]"
-                  src="https://www.youtube.com/embed/FPhg_ZjrPtU?autoplay=1&mute=1&loop=1&playlist=FPhg_ZjrPtU&controls=0&modestbranding=1&rel=0&showinfo=0&playsinline=1&enablejsapi=1&iv_load_policy=3&disablekb=1"
-                  title="Tenomad Hero Video"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  loading="lazy"
-                />
-              )}
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute top-0 left-0 w-full h-full object-cover scale-[1.01]"
+                poster="/hue_studio.png"
+              >
+                <source src="/Video%20Hero.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </motion.div>
         </div>
