@@ -236,7 +236,7 @@ export default function Home() {
                 className="absolute top-0 left-0 w-full h-full object-cover scale-[1.01]"
                 poster="/hue_studio.png"
               >
-                <source src="/Video%20Hero.mp4" type="video/mp4" />
+                <source src="/videomoi.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
