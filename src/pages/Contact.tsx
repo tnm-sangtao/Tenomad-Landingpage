@@ -155,6 +155,7 @@ export default function Contact() {
                                   <SelectItem value="ai">AI & NLP Consulting</SelectItem>
                                   <SelectItem value="qa">Quality Assurance</SelectItem>
                                   <SelectItem value="team">Dedicated Offshore Team</SelectItem>
+                                  <SelectItem value="startup">Startups</SelectItem>
                                 </SelectContent>
                               </Select>
                               <FormMessage />
